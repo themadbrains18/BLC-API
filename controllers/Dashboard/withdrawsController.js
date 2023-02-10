@@ -1,0 +1,31 @@
+
+const { withdrwaModel } = require('../../models/withdraw');
+
+
+/**
+ * Get Deposit Transaction History
+ * @param {*} req 
+ * @param {*} res 
+ */
+const getAllWithdraw = async (req, res) => {
+
+  try {
+    withdrwaModel.find({}).then((result) => {
+      if (result.length > 0) {
+        res.send({ status: 200, data: result })
+      }
+      else {
+        res.send({ status: 200, data: [] })
+      }
+    }).catch((error) => {
+      res.send({ status: 500, error })
+    })
+  } catch (error) {
+    res.send({ status: 500, error })
+  }
+
+}
+
+module.exports = {
+  getAllWithdraw
+}

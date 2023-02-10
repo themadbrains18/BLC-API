@@ -1,0 +1,50 @@
+html
+  head
+    style.
+      .wrapper{
+      padding:0;
+      width:70%;
+      }
+      .wrapper .logo{
+      text-align:left;
+      font-weight:bold;
+      }
+      .wrapper .linkButton a{
+      padding:10px 60px;
+      background:#426d9c;
+      border:none;
+      text-decoration:none;
+      cursor:pointer;
+      color:white;
+      margin-bottom:20px;
+      border-radius:8px;
+      }
+      p{
+        text-decoration:none;
+      }
+      h1{
+        text-align:center;
+        background-color:blue;
+        color:#fff;
+        padding:10px;
+        width:150px;
+      }
+  |   
+  body
+    .wrapper
+      
+      | &#x9;
+      //- p Hello! #{data.email}
+      | &#x9;
+      .ct-body
+        p
+          | We received a request to generate account on Prime Experia Exchange #{data.email} through your email address. Your Verification Code is.
+        | &#x9;
+        
+        | &#x9;
+        h1
+          | #{data.otp}
+          br
+          | 
+        | &#x9;
+        
